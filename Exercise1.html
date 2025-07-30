@@ -25,6 +25,7 @@
 
       const date=dayjs().format('MMMM D');
       console.log(date);
+      const div3 = <p>Today is {date}</p>;
 
       const productCost=10 + 2*8;
       const shippingCost=5;
@@ -37,7 +38,7 @@
         </div>
       );
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div2);
+      ReactDOM.createRoot(container).render(div3);
     </script>
   </body>
 </html>

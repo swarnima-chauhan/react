@@ -44,7 +44,12 @@
         </div>
       );
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div3);
+      const root=ReactDOM.createRoot(container);
+      //root.render(div3);
+
+      setInterval(()=>{
+        const currentTime = dayjs().format('HH:mm:ss');
+        root.render(currentTime)},1000)
     </script>
   </body>
 </html>

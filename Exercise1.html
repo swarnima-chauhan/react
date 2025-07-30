@@ -19,9 +19,10 @@
           <h4>Price: $10 </h4>
           <button>Add to Cart</button>
         </div>
-      )
+      );
+      const cost=<p>${10 + 2*8}</p>;
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(cost);
     </script>
   </body>
 </html>

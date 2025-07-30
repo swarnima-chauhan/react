@@ -21,10 +21,14 @@
         </div>
       );
 
-      const cost=<span>${10 + 2*8}</span>;
+      const productCost=10 + 2*8;
+      const shippingCost=5;
       const div2 =(
         <div>
-          <p>Product cost: {cost}</p>
+          <p>Product Cost: ${productCost}</p>
+          <p>Shipping Cost: ${shippingCost}</p>
+          <p>Total Cost: ${productCost+shippingCost}</p>
+          <button>Place your Order</button>
         </div>
       );
       const container = document.querySelector('.js-container');

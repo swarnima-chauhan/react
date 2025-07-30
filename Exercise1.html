@@ -25,7 +25,13 @@
 
       const date=dayjs().format('MMMM D');
       console.log(date);
-      const div3 = <p>Today is {date}</p>;
+      const time = dayjs().format('HH:mm:ss');
+      const div3 = (
+        <div>
+          <p>Today is {date}</p>
+          <p>Current time: {time}</p> 
+        </div>
+        );
 
       const productCost=10 + 2*8;
       const shippingCost=5;

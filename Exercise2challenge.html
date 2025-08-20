@@ -18,13 +18,15 @@
         function ProductDetails({name,cost, discountPrice}){
             return(<>
                 <p>{name}</p>
-                
-                {(!discountPrice) && <p>Price: ${cost}</p>}
-                
-                {( discountPrice && 
-                    <>
+
+                {( discountPrice ? 
+                    (<>
                     <p><del>Price: ${cost}</del></p> <p>Discount price: ${discountPrice}</p>
-                    </>
+                    </>) 
+                    : 
+                    (
+                    <p>Price: ${cost}</p>
+                    )
                 )}
                 <button>Add to cart</button>
             </>)

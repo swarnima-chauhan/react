@@ -22,9 +22,9 @@
         );
       }
 
-      function ChatMessage(props){
-        const message=props.message;
-        const sender=props.sender;
+      function ChatMessage({message, sender}){
+        //const sender=props.sender;
+        //const {message,sender}=props;//destructing
         if(sender==="user"){
           return (
           <div>

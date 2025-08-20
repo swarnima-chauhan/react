@@ -25,21 +25,15 @@
       function ChatMessage({message, sender}){
         //const sender=props.sender;
         //const {message,sender}=props;//destructing
-        if(sender==="user"){
-          return (
+        
+        return(
           <div>
+            {sender=="robot" && <img src="robot.png" width="50"/>}
             <>{message}</>
-            <img src="user.png" width="50"/>
+            {sender=="user" && <img src="user.png" width="50"/>}
           </div>
-        );
-        }else{
-          return(
-            <div>
-              <img src="robot.png" width="50"/>
-              <>{message}</>
-            </div>
-          )
-        }
+        )
+        
         
       }
 

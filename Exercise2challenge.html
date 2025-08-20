@@ -15,17 +15,18 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
 
     <script type="text/babel">
-        function ProductDetails({name,cost}){
+        function ProductDetails({name,cost, discountPrice}){
             return(<>
                 <p>{name}</p>
                 <p>Price: ${cost}</p>
+                {( discountPrice && <p>Discount price: ${discountPrice}</p>)}
                 <button>Add to cart</button>
             </>)
         }
 
         function App(){
             return(<>
-                <ProductDetails name="Cotton Socks" cost="10.90"/>
+                <ProductDetails name="Cotton Socks" cost="10.90" discountPrice="5.45"/>
                 <ProductDetails name="Tennis balls" cost="6.00"/>
                 <ProductDetails name="Plain T-Shirt"
                 cost="7.99"/>

@@ -33,10 +33,14 @@
 
         function App(){
             const [count,setCount]=React.useState(0);
+            function Reset(count){
+                setCount(count=0);
+            }
             return(
                 <>
                     <Counter count={count} setCount={setCount}/>
                     <Counter count={count} setCount={setCount}/>
+                    <button onClick={Reset}>Reset</button>
                 </>
             )      
             

@@ -17,18 +17,27 @@
 
     <script type="text/babel">
 
-        function App(){
-
+        function Counter(){
             const [count,setCount]=React.useState(0);
             function Message(){
                 setCount(count+1);
                 console.log("Clicked");
             }
+
             return (
                 <>
                     <button onClick={Message}>Clicked {count} {count==1?'time':'times'}</button>
                 </>
             )
+        }
+
+        function App(){
+            return(
+                <>
+                    <Counter/>
+                    <Counter/>
+                </>
+            )      
             
         };
 

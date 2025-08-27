@@ -13,10 +13,13 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+      //starting again
       function ChatInput(){
+        const [inputText]=React.useState('');
         function saveinputText(event){
           console.log(event.target.value);
         }
+
         return(
           <>
             <input 

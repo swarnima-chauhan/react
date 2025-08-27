@@ -17,8 +17,8 @@
 
     <script type="text/babel">
 
-        function Counter(){
-            const [count,setCount]=React.useState(0);
+        function Counter({count, setCount}){
+            
             function Message(){
                 setCount(count+1);
                 console.log("Clicked");
@@ -32,10 +32,11 @@
         }
 
         function App(){
+            const [count,setCount]=React.useState(0);
             return(
                 <>
-                    <Counter/>
-                    <Counter/>
+                    <Counter count={count} setCount={setCount}/>
+                    <Counter count={count} setCount={setCount}/>
                 </>
             )      
             

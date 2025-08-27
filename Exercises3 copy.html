@@ -23,13 +23,22 @@
             
             const [text, setText]=React.useState("");
 
-            function Yes(){
-                setText(event.target.value);
+            function Yes(e){
+                setText(e.target.value);
+            }
+            function Reset(){
+                setText("");
+            }
+            function Example(){
+                setText("Swarnima");
             }
 
             return(
                 <>
-                  <input type="text" onChange={Yes}/>
+                  <input type="text" onChange={Yes}
+                  placeholder="Type a name here" value={text}/>
+                  <button onClick={Reset}>Reset</button>
+                  <button onClick={Example}>Example</button>
                   <p>Hello {text}</p>
                 </>
             )      

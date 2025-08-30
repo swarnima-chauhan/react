@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-on{
+            background-color: rgb(25,135,84);
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .btn-off{
+            background-color: rgb(220,53,69);
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+        function App(){
+            const [isButtonOn,setIsButtonOn]=React.useState(true);
+            function switchButton(){
+                isButtonOn?setIsButtonOn(false):setIsButtonOn(true);
+            }
+            return (
+                <>
+                <button className={isButtonOn?'btn-on':'btn-off'} onClick={switchButton}>{isButtonOn?'ON':'OFF'}</button>
+                </>
+            )
+        }
+
+        const container=document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+    </script>
+
+</body>
+</html>

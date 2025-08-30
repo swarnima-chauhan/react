@@ -36,8 +36,10 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
 
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
     <script type="text/babel">
-        function App(){
+        function First(){
 
             const [showPassword, setShowPassword]=React.useState(true);
             
@@ -55,6 +57,26 @@
                 <br/>
                 <button>Login</button>
                 <button>Sign up</button>
+                </>
+            )
+        }
+
+        function Second(){
+            React.useEffect(()=>{
+                setInterval(()=>{setTime(dayjs().format('HH:MM:ss'))},1000);
+            })
+            const [time, setTime]=React.useState(dayjs().format('HH:MM:ss'));
+            return(
+                <>
+                <p>Current time : {time}</p>
+                </>
+            )
+        }
+
+        function App(){
+            return (
+                <>
+                <Second/>
                 </>
             )
         }

@@ -23,4 +23,11 @@
   height: 45px;
   border-radius: 45px;
   object-fit: cover;
+  display: flex;
+}
+
+.chat-message-time{
+  font-size: 8px;
+  color: rgb(125,125,125);
+  margin-top: 4px;
 }

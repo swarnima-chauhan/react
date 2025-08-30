@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
         input{
             margin-bottom:5px;
             padding: 6px;
@@ -22,6 +26,24 @@
             font-size: 12px;
             padding: 4px;
             border-radius: 4px;
+        }
+
+        .btn3{
+            background-color: rgb(25, 135, 84);
+            border: none;
+            color: white;
+            margin-right: 2px;
+            font-size: 12px;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        
+        .cont{
+            background-color: rgb(222,222,222);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
         }
 
     </style>
@@ -99,10 +121,12 @@
             
             return (
                 <>
-                <button onClick={click}
+                <div className="cont">
+                <button className="btn3" onClick={click}
                 ref={buttonRef}>Click {count} times</button>
-                <button onClick={reset}>Reset</button>
-                <button onClick={counter}>Auto click</button>
+                <button className="btn3" onClick={reset}>Reset</button>
+                <button className="btn3" onClick={counter}>Auto click</button>
+                </div>
                 </>
             );
         };

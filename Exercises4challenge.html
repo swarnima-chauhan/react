@@ -38,12 +38,20 @@
 
     <script type="text/babel">
         function App(){
+
+            const [showPassword, setShowPassword]=React.useState(true);
+            
+            function seePassword(){
+                showPassword?setShowPassword(false):setShowPassword(true);
+            }
+
             return (
                 <>
                 <h4>Hello, welcome to my website</h4>
                 <input type="email" placeholder="Email"/>
                 <br/>
-                <input type="password" placeholder="Password"/>
+                <input type={showPassword?'text':'password'}placeholder="Password"/>
+                <button onClick={seePassword}>Hide</button>
                 <br/>
                 <button>Login</button>
                 <button>Sign up</button>

@@ -76,10 +76,42 @@
             )
         }
 
+        function Third(){
+            const [count, setCount]=React.useState(0);
+            const buttonRef=React.useRef();
+
+            function click(){
+                setCount(count+1);
+            }
+
+            function reset(){
+                setCount(0);
+            }
+
+            function counter(){
+                setInterval(()=>{
+                    const buttonElem= buttonRef.current;
+                    if(buttonElem){
+                        buttonElem.click();
+                    }
+                },1000);
+            }
+            
+            return (
+                <>
+                <button onClick={click}
+                ref={buttonRef}>Click {count} times</button>
+                <button onClick={reset}>Reset</button>
+                <button onClick={counter}>Auto click</button>
+                </>
+            );
+        };
+
+
         function App(){
             return (
                 <>
-                <Second/>
+                <Third/>
                 </>
             )
         }

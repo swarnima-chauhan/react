@@ -35,7 +35,7 @@
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
-        height: 90vh;
+        height:100vh;
         display: flex;
         flex-direction: column;
       }
@@ -188,8 +188,11 @@
         const chatMessagesref = React.useRef(null);
 
         React.useEffect(()=>{
-          console.log(chatMessagesref.current);
-
+          const containerElem =
+          chatMessagesref.current;
+          if(containerElem){
+            containerElem.scrollTop = containerElem.scrollHeight;
+          }
         }, [chatMessages]);
 
         return(<div className="chat-messages-container" ref={chatMessagesref}> 

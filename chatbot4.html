@@ -75,6 +75,11 @@
       .para{
         text-align: center;
       }
+
+      .loading{
+        height: 40px;
+        margin: 15px;
+      }
     </style>
     <title>Chatbot</title>
   </head>
@@ -118,7 +123,7 @@
           setChatMessages([
             ...newChatMessages,
             {
-              message:'Loading...',
+              message:<img className="loading" src="loading-spinner.gif"/>,
               sender:'robot',
               id:crypto.randomUUID()
             }

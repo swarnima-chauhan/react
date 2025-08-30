@@ -63,8 +63,11 @@
 
         function Second(){
             React.useEffect(()=>{
-                setInterval(()=>{setTime(dayjs().format('HH:MM:ss'))},1000);
-            })
+                setInterval(()=>{setTime(dayjs().format('HH:MM:ss'));
+                    console.log('run code');
+                },1000);
+            },[time]);
+
             const [time, setTime]=React.useState(dayjs().format('HH:MM:ss'));
             return(
                 <>

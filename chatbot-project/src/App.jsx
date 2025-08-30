@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
-import './App.css'
+import { useState, useEffect, useRef } from 'react';
+import './App.css';
 import {Chatbot} from 'supersimpledev';
-
+import RobotProfileImage from './assets/robot.png';
+import UserProfileImage from './assets/user.png';
+import LoadingSpinner from './assets/loading-spinner.gif';
       function useAutoScroll(dependencies){
         const containerRef= useRef(null);
 
@@ -43,7 +45,7 @@ import {Chatbot} from 'supersimpledev';
           setChatMessages([
             ...newChatMessages,
             {
-              message:<img className="loading" src="loading-spinner.gif"/>,
+              message:<img className="loading" src={LoadingSpinner}/>,
               sender:'robot',
               id:crypto.randomUUID()
             }
@@ -98,13 +100,13 @@ import {Chatbot} from 'supersimpledev';
           'chat-message-robot'
         }>
             {sender=="robot" && (
-              <img src="robot.png" className="chat-message-profile"/>
+              <img src={RobotProfileImage} className="chat-message-profile"/>
             )}
             <div className="chat-message-text">
             {message}
             </div>
             {sender=="user" && (
-              <img src="user.png" 
+              <img src={UserProfileImage} 
               className="chat-message-profile"/>
             )}
           </div>

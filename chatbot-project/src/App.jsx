@@ -6,17 +6,11 @@ import { ChatMessage } from './components/ChatMessage';
 import './App.css';
 
 function App(){
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages'))||[{}]);
 
-    useEffect(()=>{
-      Chatbot.addResponses({
-        'goodbye':'Good bye',
-        'give me unique id':function(){
-          return `Sure! Here's a unique ID: ${crypto.randomUUID()}`;
-        }
-      });
-    },[]);
-
-        const [chatMessages, setChatMessages] = useState([]);
+  useEffect(()=>{
+      localStorage.setItem('messages', JSON.stringify(chatMessages));
+    },[chatMessages]);
 
         return (
           <>

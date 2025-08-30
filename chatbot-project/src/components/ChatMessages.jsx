@@ -3,7 +3,7 @@ import { ChatMessage } from './ChatMessage';
 import './ChatMessages.css';
 
 function ChatMessages({chatMessages}){
-  const chatMessagesref= useAutoScroll([chatMessages]);
+  const chatMessagesref= useAutoScroll(chatMessages);
 
   return(<div className="chat-messages-container" ref={chatMessagesref}> 
   {chatMessages.map((chatMessage)=>{

@@ -5,7 +5,7 @@ export function Header() {
   return (
     <div className="header">
       <div className="left-section">
-        <NavLink to="/" className="header-NavLink">
+        <NavLink to="/" className="header-link">
           <img className="logo" src="images/logo-white.png" />
           <img className="mobile-logo" src="images/mobile-logo-white.png" />
         </NavLink>
@@ -20,11 +20,11 @@ export function Header() {
       </div>
 
       <div className="right-section">
-        <NavLink className="orders-NavLink header-NavLink" to="/orders">
+        <NavLink className="orders-link header-link" to="/orders">
           <span className="orders-text">Orders</span>
         </NavLink>
 
-        <NavLink className="cart-NavLink header-NavLink" to="checkout">
+        <NavLink className="cart-link header-link" to="/checkout">
           <img className="cart-icon" src="images/icons/cart-icon.png" />
           <div className="cart-quantity">3</div>
           <div className="cart-text">Cart</div>

@@ -103,7 +103,7 @@
   justify-content: end;
 }
 
-.header .orders-link {
+.header .orders-link  {
   color: white;
 
   display: flex;
@@ -146,4 +146,8 @@
 
   width: 26px;
   text-align: center;
+}
+
+.header .orders-link.active{
+  text-decoration: underline;
 }
